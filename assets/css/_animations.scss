@@ -1,0 +1,57 @@
+// sample animations
+ // hover animation
+ .hover-animation::before {
+  transform: scaleX(0);
+  transform-origin: bottom right;
+ }
+
+ .hover-animation:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+ }
+
+ .hover-animation::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  inset: 0 0 0 0;
+  @apply bg-Primary bg-opacity-50 p-2 -top-1 -left-1 rounded;
+  z-index: -1;
+  transition: transform .3s ease;
+ }
+
+ .hover-animation {
+  position: relative;
+ }
+
+ // -------- default animation ---------------
+ .v-enter-active,
+ .v-leave-active {
+  transition: opacity 0.5s ease;
+ }
+
+ .v-enter-from,
+ .v-leave-to {
+  opacity: 0;
+ }
+ // -------- tray animation ----------
+ .tray-enter,
+ .tray-leave-to { opacity: 0 }
+
+ .tray-leave,
+ .tray-enter-to { opacity: 1 }
+
+ .tray-enter-active,
+ .tray-leave-active { transition: opacity 300ms }
+
+ // ------------ slide animation -------------
+ .enter { transform: translateX(100%) }
+ .enter-to { transform: translateX(0) }
+ .slide-enter-active { position: absolute }
+
+ .leave { transform: translateX(0) }
+ .leave-to { transform: translateX(-100%) }
+
+ .slide-enter-active,
+ .slide-leave-active { transition: all 750ms ease-in-out }

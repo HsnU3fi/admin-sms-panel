@@ -1,0 +1,123 @@
+// ---------------- form item ---------------
+.sample-form {
+  @apply grid grid-cols-1;
+  h4.section-label {
+    @apply text-Gray-b2 mt-3 mb-4 text-base font-medium;
+  }
+  .form-item {
+    label {
+      @apply block mb-2 text-Gray-b5 text-xs font-medium;
+      .star {
+        @apply text-Error-b2 text-xl relative top-1;
+      }
+    }
+    .el-select,
+    .el-input {
+      @apply w-full h-[42px];
+      input {
+        @apply text-sm;
+      }
+      .el-input__wrapper {
+        @apply h-[42px] shadow-none border border-solid rounded-lg border-Gray-b7;
+        &:hover {
+          @apply shadow-none border-Gray-b6;
+        }
+        &.is-focus {
+          @apply border-Primary-w2 shadow-none;
+        }
+      }
+    }
+    .holder-black {
+      input::placeholder,
+      .isax,
+      .el-input__prefix {
+        @apply text-Gray-b2;
+      }
+    }
+    .with-prepend,
+    .with-append {
+      @apply border border-Gray-b7 rounded-lg;
+      .el-input__wrapper {
+        @apply border-none h-full;
+      }
+      .el-input-group__prepend,
+      .el-input-group__append {
+        @apply bg-transparent border-none shadow-none px-2;
+      }
+    }
+    .search-input {
+      width: 400px;
+    }
+    .el-checkbox-group {
+      @apply flex flex-wrap;
+      .el-checkbox {
+        @apply w-1/4 mr-0;
+      }
+    }
+    .el-checkbox {
+      @apply flex;
+      .el-checkbox__inner,
+      .el-checkbox__input {
+        @apply w-[20px] h-[20px] rounded-md;
+        --el-checkbox-checked-bg-color: #116dff;
+        &.is-checked .el-checkbox__inner {
+          @apply bg-Primary border-Primary;
+        }
+        &:after {
+          @apply top-[1px] left-[6px] h-[12px] w-[4px];
+        }
+      }
+      .el-checkbox__label {
+        @apply text-xs text-Gray-b2 font-medium  #{!important};
+      }
+    }
+    .el-radio {
+      @apply flex;
+      .el-radio__inner,
+      .el-radio__input {
+        @apply w-[20px] h-[20px];
+        --el-checkbox-checked-bg-color: #116dff;
+        &.is-checked .el-radio__inner {
+          @apply bg-Gray-b10 border-Primary;
+        }
+        &:after {
+          @apply h-[15px] w-[15px] bg-Gray-b10 bg-Primary;
+        }
+      }
+      .el-radio__label {
+        @apply text-xs text-Gray-b2 font-medium  #{!important};
+      }
+    }
+    .el-textarea {
+      .el-textarea__inner {
+        @apply py-4 shadow-none border border-solid rounded-lg border-Gray-b7;
+        &:hover {
+          @apply shadow-none border-Gray-b6;
+        }
+        &:focus {
+          @apply border-Primary-w2 shadow-none;
+        }
+      }
+    }
+    .el-switch {
+      --el-switch-on-color: #0e57cc;
+    }
+    .time-picker {
+      .el-input__wrapper {
+        @apply w-full flex-row-reverse;
+        .el-input__prefix {
+          @apply text-2xl text-Primary;
+        }
+      }
+    }
+  }
+}
+.el-popper {
+  .el-select-dropdown {
+    .el-scrollbar {
+      .el-select-dropdown__item {
+        @apply text-sm flex items-center;
+      }
+    }
+  }
+}

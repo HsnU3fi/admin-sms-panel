@@ -1,0 +1,9 @@
+version: "3.7"
+services:
+  useradmin-front:
+    container_name: useradmin-front
+    image: useradmin-front:latest
+    build: .
+    restart: unless-stopped
+    ports:
+      - "3000:3000"

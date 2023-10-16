@@ -1,0 +1,13 @@
+.default-layout {
+  background-color: #F7F7F7;
+  @apply flex min-h-screen;
+  .body {
+    @apply grow;
+  }
+  .base-sidebar.open + .body {
+    max-width: calc(100vw - 15rem);
+  }
+  .base-sidebar.close + .body {
+    max-width: calc(100vw - 10rem);
+  }
+}

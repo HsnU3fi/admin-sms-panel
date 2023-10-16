@@ -1,0 +1,41 @@
+<template>
+  <section>
+    <client-only>
+      <section class="animate__animated animate__zoomIn">
+        <h2 class="text-sm lg:text-base text-Gray-b3 font-normal">Builder Users</h2>
+        <apexchart :options="options" type="line" :series="options.series" height="280px"/>
+      </section>
+    </client-only>
+  </section>
+</template>
+
+<script setup>
+const options = ref({
+  labels: ['users'],
+  plotOptions: {
+    bar: {
+      horizontal: true
+    }
+  },
+  chart: {
+    height: '100px'
+  },
+  series: [{
+    data: [
+      { x: "1999", y: 400 },
+      { x: "2000", y: 600 },
+      { x: "2001", y: 800 },
+      { x: "2002", y: 900 },
+      { x: "2003", y: 1000 },
+      { x: "2004", y: 1300 },
+      { x: "2005", y: 2000 },
+      { x: "2006", y: 3000 },
+      { x: "2007", y: 5000 },
+    ]
+  }]
+})
+</script>
+
+<style scoped>
+
+</style>

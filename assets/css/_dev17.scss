@@ -1,0 +1,101 @@
+.card-detail-form {
+  .el-input__wrapper {
+    @apply w-full;
+  }
+}
+
+.new-domain {
+  .el-input__wrapper {
+    @apply rounded-r-none h-14;
+  }
+}
+
+.pricing {
+  .plans {
+    .plan {
+      @apply p-3 border border-Gray-b7 pb-24 relative;
+      .title {
+        @apply text-base md:text-lg lg:text-xl flex items-center gap-3;
+        .isax {
+          @apply text-Primary;
+        }
+      }
+
+      .description {
+        @apply text-xs lg:text-sm text-Gray-b5;
+      }
+
+      .price {
+        @apply mt-6;
+        .value {
+          @apply text-xl md:text-2xl text-Gray-b2;
+        }
+      }
+
+      .order-btn {
+        @apply mt-6 w-full bg-Primary bg-opacity-80 hover:bg-opacity-100 text-white border-none;
+      }
+
+      .features {
+        @apply mt-6;
+        .title {
+          @apply text-sm lg:text-base mb-4;
+        }
+
+        .feature-item {
+          p {
+            @apply text-xs md:text-sm text-Gray-b3;
+          }
+        }
+      }
+
+      .footer {
+        @apply py-4 mt-12 w-full absolute left-0 bottom-0 w-full bg-Gray-b7 text-center text-base rounded-b-lg text-Gray-b2;
+      }
+
+      &.best-plan {
+        @apply text-white;
+        .title {
+          .isax {
+            @apply text-Primary-w4;
+          }
+        }
+
+        .price {
+          .value {
+            @apply text-Primary-w4;
+          }
+        }
+
+        .features {
+          .feature-item {
+            p {
+              @apply text-Primary-w4;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.auto-recharge {
+  .sample-form {
+    .form-item {
+      .el-input.el-input-group {
+        .el-input__wrapper {
+          @apply rounded-l-none;
+        }
+
+        .el-input-group__prepend {
+          @apply h-12;
+        }
+      }
+    }
+  }
+}
+.new-domain-checkout {
+  .el-input__wrapper {
+    @apply w-full;
+  }
+}
